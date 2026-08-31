@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: naija_cng_db
+    environment:
+      POSTGRES_USER: cng_admin
+      POSTGRES_PASSWORD: cng_password
+      POSTGRES_DB: naija_cng
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
