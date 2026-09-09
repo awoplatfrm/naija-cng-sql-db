@@ -63,6 +63,8 @@ FROM workshops w
 LEFT JOIN workshop_finalcials wf ON w.id = wf.workshop_id;
 
 
+
+
 SELECT
     w.state,
     w.name AS workshop_name,
@@ -74,3 +76,6 @@ SELECT
     ) AS state_cost__rank
 FROM conversions c
 INNER JOIN workshops w ON c.workshop_id = w.id;
+
+
+
